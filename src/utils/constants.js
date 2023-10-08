@@ -14,3 +14,5 @@ export const API_OPTION = {
 };
 
 export const YoutubeUrl = "https://www.youtube.com/embed/";
+
+export const TMDB_Image_Url = "https://image.tmdb.org/t/p/w500/";
