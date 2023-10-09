@@ -10,6 +10,7 @@ import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { Background_Url } from "../utils/constants";
 
 const Login = () => {
   const dispatcher = useDispatch();
@@ -52,7 +53,6 @@ const Login = () => {
             .catch((error) => {
               navigate("/error");
             });
-
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -79,11 +79,7 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <img
-        className="absolute"
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/9db4a880-3034-4e98-bdea-5d983e86bf52/b5953637-091d-4e02-9754-2bfadc8a8f7c/IN-en-20230925-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-        alt="Background Img"
-      />
+      <img className="absolute" src={Background_Url} alt="Background Img" />
       <form
         onSubmit={(e) => e.preventDefault()}
         className="absolute p-12 bg-black w-3/12 my-24 left-0 right-0 mx-auto text-white rounded-lg bg-opacity-80"

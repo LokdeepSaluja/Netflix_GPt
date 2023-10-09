@@ -16,3 +16,12 @@ export const API_OPTION = {
 export const YoutubeUrl = "https://www.youtube.com/embed/";
 
 export const TMDB_Image_Url = "https://image.tmdb.org/t/p/w500/";
+
+export const Background_Url =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/9db4a880-3034-4e98-bdea-5d983e86bf52/b5953637-091d-4e02-9754-2bfadc8a8f7c/IN-en-20230925-popsignuptwoweeks-perspective_alpha_website_large.jpg";
+
+export const Supported_Languages = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];
