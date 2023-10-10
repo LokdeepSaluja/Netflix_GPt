@@ -50,10 +50,10 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-44 " src={Logo} alt="Logo" />
+    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+      <img className=" w-44 mx-auto md:mx-0" src={Logo} alt="Logo" />
       {user && (
-        <div className="flex p-5">
+        <div className="flex p-5 justify-between">
           {gptSearch && (
             <select
               className="p-2 m-2 bg-gray-900 text-white"
@@ -74,7 +74,11 @@ const Header = () => {
             {gptSearch ? "Homepage" : "GPT Search"}
           </button>
           <p className="text-black">{user.displayName}</p>
-          <img className="w-7 h-10" src={Background} alt="User Icon" />
+          <img
+            className="hidden md:block w-7 h-10"
+            src={Background}
+            alt="User Icon"
+          />
           <button onClick={handleSignOut} className="font-bold text-white">
             (SignOut)
           </button>
